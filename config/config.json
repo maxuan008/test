@@ -1,0 +1,173 @@
+{
+
+  "dev":{
+         "port": 9188,
+          "domain": ".learn.com",
+          "mysql":{
+            "url": "192.168.0.6",
+            "user": "root",
+            "password": "123456",
+            "database": "test"
+          },
+
+         "redis" : {
+                    "url" :  "192.168.1.155",
+                    "port": 6379 ,
+                    "user" : "ecgeditor",
+                    "password" : "ec123456",
+                    "secret" : "you_guess", 
+                    "prefix" : "PHPREDIS_SESSION:",
+                    "client": "client"
+                   }  ,
+            
+
+
+          "engineHost": "192.168.1.25",
+          "ecgeditorHost":"192.168.1.44",
+          "OCPath":"192.168.1.77:8080"
+  },
+
+
+
+
+
+  "joint":{
+         "domain": ".learn.com",
+        "port": 9188,
+        "mysql":{
+          "url": "192.168.1.182",
+          "user": "root",
+          "password": "1234",
+          "database": "owncloud_dev"
+              },
+
+        "redis" : {
+                  "url" :  "192.168.1.155",
+                  "port": 6379 ,
+                  "user" : "ecgeditor",
+                  "password" : "ec123456",
+                  "secret" : "you_guess", 
+                  "prefix" : "PHPREDIS_SESSION:",
+                  "client": "client"
+                  }  ,
+      
+        "OC" : {
+                "host": "http://ocmx.ec.edu"
+                    },
+
+        "OC_mysql" : {
+                    "host": "192.168.1.182",
+                    "user" : "root",
+                    "password" : "1234"
+                  } ,
+  
+        "OC_dataBase" : {
+                    "owncloud_dev3" : "owncloud_dev"  
+                    } ,
+
+
+        "engineHost": "newengine.learn.com",
+        "ecgeditorHost":"authoring.learn.com",
+        "OCPath":"oc.learn.com"
+  },
+
+
+
+  "prod":{
+         "port": 9177,
+          "domain": "xuezuowang.com",
+          "mysql":{
+                    "url": "192.168.0.81",
+                    "user": "root",
+                    "password": "password",
+                    "database": "orgapp"
+                  },
+
+         "redis" : {
+                    "url" :  "192.168.0.92",
+                    "port": 6379 ,
+                    "user" : "ecgeditor",
+                    "password" : "ec123456",
+                    "secret" : "you_guess", 
+                    "prefix" : "PHPREDIS_SESSION:",
+                    "client": "client"
+                   }  ,
+
+        "engineHost": "newengine3w.xuezuowang.com",
+        "ecgeditorHost":"authoring.xuezuowang.com",
+        "OCPath":"www.xuezuowang.com"
+  },
+
+
+
+  "production":{
+        "port": 9188,
+        "mysql":{
+          "url" :  "172.19.11.189",
+          "user" : "root",
+          "password" : "password",
+          "database" : "owncloud_dev"
+        },
+        "engineHost": "172.19.11.189",
+        "ecgeditorHost":"172.19.11.189",
+        "OCPath":"www.xuezuowang.com"
+  },
+
+  "ports":{
+    "dev":{
+      "playerPort":"",
+      "processEnginePort":"http://oldengine.learn.com",
+      "newProcessEnginePort":"http://newengine.learn.com",
+      "soursePort":"",
+      "filePort":"http://newengine.learn.com",
+      "VMPort":"http://www.xuezuowang.com:10000",
+      "VM2Port":"http://www.xuezuowang.com:10001",
+      "VM3Port":"192.168.0.38",
+      "ecgeditorPort":"http://authoring.learn.com",
+      "ecgeditorPort2":"authoring.learn.com",
+      "examPort":"http://exam.learn.com",
+      "monitorPort":"http://org.learn.com",
+      "orgPort":"http://org.learn.com",
+      "studyPort":"http://comsocket.learn.com"
+    },
+    "joint":{
+      "playerPort":"",
+      "processEnginePort":"http://oldengine.learn.com",
+      "newProcessEnginePort":"http://newengine.learn.com",
+      "soursePort":"",
+      "filePort":"http://newengine.learn.com",
+      "VMPort":"http://www.xuezuowang.com:10000",
+      "VM2Port":"http://www.xuezuowang.com:10001",
+      "VM3Port":"192.168.0.38",
+      "ecgeditorPort":"http://authoring.learn.com",
+      "ecgeditorPort2":"authoring.learn.com",
+      "examPort":"http://exam.learn.com",
+      "monitorPort":"",
+      "orgPort":"",
+      "studyPort":"http://comsocket.learn.com"
+    },
+    "prod":{
+      "playerPort":"",
+      "processEnginePort":"http://oldengine3w.xuezuowang.com",
+      "newProcessEnginePort":"http://newengine3w.xuezuowang.com",
+      "soursePort":"",
+      "filePort":"http://newengine3w.xuezuowang.com",
+      "VMPort":"http://www.xuezuowang.com:10000",
+      "VM2Port":"http://www.xuezuowang.com:10001",
+      "VM3Port":"192.168.0.38",
+      "ecgeditorPort":"http://authoring.xuezuowang.com",
+      "ecgeditorPort2":"authoring.xuezuowang.com",
+      "examPort":"http://exam.xuezuowang.com",
+      "monitorPort":"http://www.xuezuowang.com",
+      "orgPort":"http://www.xuezuowang.com",
+      "studyPort":"http://comsocket.xuezuowang.com"
+    },
+    "production":{}
+  }
+
+
+
+
+
+}
+
