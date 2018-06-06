@@ -124,10 +124,10 @@ function epTest(req,res,next){
         // console.log(ep);
         // //ep.emit('e1', '传递给e1的数据');
         // ep.emit('e4', '传递给e4的数据');
-
-
+        
+        
     /*2.分析ep的代码实现 */
-
+ 
         ep.bind('e1',function(data1){
             console.log('e1回掉了:', data1,ep);
         });
