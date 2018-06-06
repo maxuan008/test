@@ -34,48 +34,6 @@
 
 
 
-  "joint":{
-         "domain": ".learn.com",
-        "port": 9188,
-        "mysql":{
-          "url": "192.168.1.182",
-          "user": "root",
-          "password": "1234",
-          "database": "owncloud_dev"
-              },
-
-        "redis" : {
-                  "url" :  "192.168.1.155",
-                  "port": 6379 ,
-                  "user" : "ecgeditor",
-                  "password" : "ec123456",
-                  "secret" : "you_guess", 
-                  "prefix" : "PHPREDIS_SESSION:",
-                  "client": "client"
-                  }  ,
-      
-        "OC" : {
-                "host": "http://ocmx.ec.edu"
-                    },
-
-        "OC_mysql" : {
-                    "host": "192.168.1.182",
-                    "user" : "root",
-                    "password" : "1234"
-                  } ,
-  
-        "OC_dataBase" : {
-                    "owncloud_dev3" : "owncloud_dev"  
-                    } ,
-
-
-        "engineHost": "newengine.learn.com",
-        "ecgeditorHost":"authoring.learn.com",
-        "OCPath":"oc.learn.com"
-  },
-
-
-
   "prod":{
          "port": 9177,
           "domain": "xuezuowang.com",
