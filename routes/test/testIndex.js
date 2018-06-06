@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var config = require('../../config/config.json');
-
+var EventProxy =   require('eventproxy');
 
 var env = global.ENV;
 console.log('test ENV:', env);
@@ -24,7 +24,7 @@ router.get('/', function(req, res, next) {
     --事件2开始执行
     --事件2回调完成: event2 ok
     --x1= 0
-    --代码最后一行
+    --代码最后一行    
     --GET /test/eventTest 200 7.850 ms - 833
     --数据连接回调完成
     --数据库查询回调完成
@@ -86,6 +86,82 @@ function eventTest(req,res,next){
         console.log('事件2开始执行');
         return callback('event2 ok');
     }
+
+
+
+
+
+
+/*分析eventProxy的原理，及分析代码写法  */
+
+router.get('/epTest', epTest );
+
+function epTest(req,res,next){
+    var ep =  new EventProxy();
+     
+   /*1. ep的函数用法 */
+        // ep.addListener('e1',function(data1){
+        //     console.log('e1回掉了:', data1,ep);
+        //     ep.removeListener('e2');
+        //     ep.emit('e3', '传递给e3的数据');
+        // });
+
+        // ep.bind('e2',function(data2){
+        //     console.log('e2回掉了:', data2,ep);
+        //     ep.emit('e1', '传递给e1的数据')
+        // });
+
+        // ep.on('e3',function(data3){
+        //     console.log('e3回掉了:', data3,ep);
+        //     ep.emit('e2', '传递给e2的数据');
+        // });
+
+        // ep.all('e4',function(data4){
+        //     console.log('e4回掉了:', data4,ep);
+        //     ep.emit('e3', '传递给e3的数据');
+        // });
+
+        // console.log(ep);
+        // //ep.emit('e1', '传递给e1的数据');
+        // ep.emit('e4', '传递给e4的数据');
+
+
+    /*2.分析ep的代码实现 */
+
+        ep.bind('e1',function(data1){
+            console.log('e1回掉了:', data1,ep);
+        });
+
+        ep.emit('e1', '传递给e1的数据') 
+
+
+
+
+
+    var result =" <br> 测试结果：<br>一：ep的函数用法 <br>  1. ep.all, 执行后会将此事件队列中移除; 而ep.addList .bind .on执行后不移除，只要触发依然执行。  "+
+    " <br> 2. ep的事件队列可以通过： ep._callbacks中查看。 " + 
+    " <br> 3. 事件队列可以通过ep.removeListener  ep.unbind移除 " + 
+    "<br><br> 二：分析ep的代码实现 "+ 
+    "<br>  1. 当有事件绑定时, ep会将函数以参数传入addListener方法,并将函数对象(callback)存储在 _callbacks （JSON）数据中 " + 
+    "<br>  2. 随后ep对象执行emit函数（调用trigger），ep会从 _callbacks 中提取对应的事件函数， 并通过函数对象的 .apply方法对回调函数传参数并执行 " + 
+    "<br>  ";
+
+    return res.send( result);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,17 +1,20 @@
 {
 
+
+
+
   "dev":{
          "port": 9188,
           "domain": ".learn.com",
           "mysql":{
-            "url": "192.168.0.6",
-            "user": "root",
-            "password": "123456",
+            "url": "192.168.0.100",
+            "user": "nodejs",
+            "password": "Mx123456789",
             "database": "test"
           },
 
          "redis" : {
-                    "url" :  "192.168.1.155",
+                    "url" :  "192.168.0.100",
                     "port": 6379 ,
                     "user" : "ecgeditor",
                     "password" : "ec123456",
