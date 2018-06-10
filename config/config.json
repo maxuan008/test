@@ -7,7 +7,7 @@
          "port": 9188,
           "domain": ".learn.com",
           "mysql":{
-            "url": "192.168.0.100",
+            "url": "192.168.0.102",
             "user": "nodejs",
             "password": "Mx123456789",
             "database": "test"
