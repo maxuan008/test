@@ -9,7 +9,7 @@
           "mysql":{
 
             "url": "127.0.0.1",
-            "user": "nodejs",
+            "user": "root",
             "password": "Mx123456789",
             "database": "test"
           },
